@@ -1,0 +1,2 @@
+model_checkpoint_path: "trafficNet_sess.ckpt"
+all_model_checkpoint_paths: "trafficNet_sess.ckpt"
