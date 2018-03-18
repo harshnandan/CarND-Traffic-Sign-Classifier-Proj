@@ -39,7 +39,7 @@ The goals / steps of this project are the following:
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+Here is a link to my [project code](https://github.com/harshnandan/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
 ### Data Set Summary & Exploration
 
@@ -69,20 +69,25 @@ It is easy to realize that the colors of traffic signs are important and hence c
 The provided training data is augmented with images which are modified version of randomly sampled images within the training data set. This not only provides richer training data set, but also modifies the quality of several of the images. The applied transforms can be broadly divided into two categories:
 
 1. Image quality transforms :
+
     a. Adjust Contrast and Brightness
 	
 ![alt text][image3]
+
     b. Sharpen the image
 	
 ![alt text][image4]
+
     c. Histogram Equalization
 	
 ![alt text][image5]
+
 2. Image shape transforms :
 
     a. Scale image and crop
 
 ![alt text][image6]
+
     b. Rotate
 
 ![alt text][image7]
@@ -90,6 +95,7 @@ The provided training data is augmented with images which are modified version o
 One transformation from each of the above mentioed category is randomly picked an applied sequentially to randomly selected image. The user specifies the number of figures to augment to original training dataset.
 
 Here is an example of an original image and an augmented image:
+
 ![alt text][image8]
 
 
@@ -127,18 +133,23 @@ My final model results were:
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
+
 The initial architecture had only 12 and 16 activation layers in the first two convolutional layers. 
 
 * What were some problems with the initial architecture?
+
 It was noticed that both training and cros-validation set accuracy plateued at around 96% and 90% respectively.
 
 * How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
+
 The plateu indicated that the model was underfitting and needs more parameters to lear from the training data. 
 
 * Which parameters were tuned? How were they adjusted and why?
+
 Hence the I started increasing the number of activation layers. The presented architecture provided me with the needed accuracy on a consistent basis.
 
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
+
 Addition of dropuot of (keep probability = 0.8) further helped the cross-validation performance.
 
 
@@ -157,7 +168,7 @@ Here are the results of the prediction:
 | Image			                    |     Prediction	        					| 
 |:---------------------------------:|:---------------------------------------------:| 
 | Right of way on next Intersection | Right of way on next Intersection				| 
-| Road Work             			| U-turn 										|
+| Road Work             			| Road Work  									|
 | Speed Limit (70 km/h)				| Speed Limit (70 km/h)							|
 | General Caution          			| General Caution								|
 | Wild animal crossing			    | Wild animal crossing 							|
