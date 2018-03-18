@@ -20,7 +20,7 @@ The goals / steps of this project are the following:
 [image1]: ./writeup_images/trainingDataSet_stats.png "Training dataset stats"
 [image2]: ./writeup_images/trainingDataSet.png "Training dataset"
 [image3]: ./writeup_images/brightness_contrast.png "Brighness and Contrast"
-[image4]: ./writeup_images/sharp.png.png "Sharpen"
+[image4]: ./writeup_images/sharp.png "Sharpen"
 [image5]: ./writeup_images/histogram_eq.png "Histogram Equalization"
 [image6]: ./writeup_images/scale_crop.png "Brighness and Contrast"
 [image7]: ./writeup_images/rotate.png "Brighness and Contrast"
