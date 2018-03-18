@@ -138,7 +138,7 @@ The initial architecture had only 12 and 16 activation layers in the first two c
 
 * What were some problems with the initial architecture?
 
-It was noticed that both training and cros-validation set accuracy plateued at around 96% and 90% respectively.
+It was noticed that both training and cros-validation set accuracy plateued at around 99% and 90% respectively.
 
 * How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
 
