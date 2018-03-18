@@ -27,8 +27,8 @@ The goals / steps of this project are the following:
 [image8]: ./writeup_images/combined_operation.png "sample Augmented Image"
 
 [image9]: ./writeup_images/new_images.png "New images"
-[image10]: ./writeup_images/prediction.png.png "Prediction"
-[image11]: ./writeup_images/softmax_prediction.png.png "Top 5 predictions"
+[image10]: ./writeup_images/prediction.png "Prediction"
+[image11]: ./writeup_images/softmax_prediction.png "Top 5 predictions"
 
 
 ## Rubric Points
@@ -70,16 +70,23 @@ The provided training data is augmented with images which are modified version o
 
 1. Image quality transforms :
     a. Adjust Contrast and Brightness
+	
 ![alt text][image3]
     b. Sharpen the image
+	
 ![alt text][image4]
     c. Histogram Equalization
+	
 ![alt text][image5]
 2. Image shape transforms :
+
     a. Scale image and crop
+
 ![alt text][image6]
     b. Rotate
+
 ![alt text][image7]
+
 One transformation from each of the above mentioed category is randomly picked an applied sequentially to randomly selected image. The user specifies the number of figures to augment to original training dataset.
 
 Here is an example of an original image and an augmented image:
@@ -114,9 +121,9 @@ The network was trained using AdamOptimizer (learning rate= 0.001) with a batch 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* training set accuracy of 97.99%
+* validation set accuracy of 94.17%
+* test set accuracy of 92.7%
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
@@ -157,22 +164,11 @@ Here are the results of the prediction:
 
 ![alt text][image10] 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 6 of the 6 traffic signs, which gives an accuracy of 100%. But the trained model was again testing on 6 more images which were variant of the original 6 images in terms of brightness, contrast, histogram, scale and rotation. All the test images were labeled correctly.  
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
-
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
-
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
-
+For all the 12 images (6 original and 6 variants) the model shows great confidence in predicted labels. Even the sign which was partially covered with snow is labeled correctly.
 
 ![alt text][image11] 
 
